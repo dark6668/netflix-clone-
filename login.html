@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> login Page</title>
+
+  <style>
+    body {
+
+      background: black url('https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg') no-repeat center fixed;
+      font-family: Helvetica, sans-serif;
+      animation: backpage 5s ease-in-out infinite forwards;
+    }
+
+    @keyframes backpage {
+
+
+      20% {
+        background: black url('https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_.jpg') no-repeat center fixed
+      }
+
+      40% {
+        background: black url('https://flxt.tmsimg.com/assets/p7825626_p_v8_af.jpg') no-repeat center fixed
+      }
+
+      80% {
+        background: black url('https://m.media-amazon.com/images/M/MV5BMTY0NTUyMDQwOV5BMl5BanBnXkFtZTgwNjAwMTA0MDE@._V1_FMjpg_UX1000_.jpg') no-repeat center fixed
+      }
+
+      90% {
+        background: black url('https://m.media-amazon.com/images/M/MV5BNmQ0ODBhMjUtNDRhOC00MGQzLTk5MTAtZDliODg5NmU5MjZhXkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_FMjpg_UX1000_.jpg') no-repeat cover center fixed
+      }
+
+      100% {
+        background: black url('https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg') no-repeat center  fixed;
+      }
+
+
+    }
+
+    .netflixImges img {
+      height: 70px;
+      width: 100px;
+      margin: 0px;
+
+    }
+
+    .border {
+
+
+      inline-size: 300px;
+      padding: 10vmax;
+      margin: 10vmax 0 0 30vmax;
+    }
+
+
+    .userNameAndPassword {
+      margin-left: 1vmax;
+      inline-size: 10vmax;
+
+
+    }
+
+    input[type="password"] {
+      margin-left: 30px;
+      inline-size: 10vmax;
+
+
+    }
+
+
+    input {
+      margin-left: 10px;
+    }
+   label{
+    color: rgb(21, 255, 0);
+    
+   }
+
+  </style>
+</head>
+
+<body>
+
+  <div id="loader">
+  </div>
+  <div class="background">
+    <div class="netflixImges"><a href="/login.html"><img src="/images/netflix.png"></a></div>
+    <div class="form">
+      <form action="app.js" method="POST">
+        <div class="border">
+
+          <label type="name"> User Name</label>
+          <input class="userNameAndPassword" name='name' type="text" required>
+          <p> <label type="password"> Password</label>
+            <input class="userNameAndPassword" name='password' type="password" required>
+
+
+          <p><input type="submit" value="Sign in">
+
+            <button class="sign up">Sign Up</button>
+      </form>
+    </div>
+
+    <script>
+   
+    </script>
+</body>
+
+</html>

@@ -1,290 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <style>
+      body {
+        background-color: black;
+        font-family: Helvetica, sans-serif;
+        color: aliceblue;
+      }
 
-        body {
-            background-color: black;
-            font-family: Helvetica, sans-serif;
-            color: aliceblue;
-        }
+      .netflixImges {
+        height: 70px;
+        width: 100px;
+        margin: 0px 0px 0px;
+      }
 
-        .netflixImges {
-            height: 70px;
-            width: 100px;
-            margin: 0px 0px 0px;
+      .header {
+        display: flex;
+        gap: 20px;
+        margin-left: 100px;
+        margin-top: 30%px;
+      }
 
-        }
+      a:link,
+      a {
+        text-decoration: none;
+        color: aliceblue;
+      }
 
+      .headeTwo {
+        display: flex;
+        justify-content: end;
+      }
 
-        .header {
-            display: flex;
-            gap: 20px;
-            margin-left: 100px;
-            margin-top: 30%px;
-        }
+      .bell,
+      .userImge {
+        height: 50px;
+        width: 80px;
+        margin-top: 30%px;
+      }
 
+      .bell {
+        margin-left: auto;
+      }
 
+      .scrollBack,
+      .scrollForward {
+        height: 30px;
+        width: 50px;
+        margin-top: 30%px;
+      }
 
-        a:link,
-        a {
-            text-decoration: none;
-            color: aliceblue;
-        }
+      .container,
+      .container2 {
+        margin-top: 30%x;
+        margin-left: 80px;
+        position: relative;
+        display: flex;
+        overflow-x: scroll;
+        overflow: hidden;
+      }
 
-        .headeTwo {
-            display: flex;
-            justify-content: end;
+      img {
+        margin: 20px 10px 20px 20px;
+        height: 300px;
+        width: 300px;
+      }
 
-        }
+      .watchNow,
+      .tranding {
+        margin: 80px 0 0 80px;
+      }
 
-        .bell,
-        .userImge {
-            height: 50px;
-            width: 80px;
-            margin-top: 30%px;
+      .textMovie1,
+      .textMovie2,
+      .textMovie3,
+      .textMovie4,
+      .textMovie5,
+      .textMovie6,
+      .textMovie7,
+      .textMovie8 {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+      }
 
+      .firstMovie:hover,
+      .secondMovie:hover,
+      .thirdMovie:hover,
+      .fourthMovie:hover,
+      .fifthMovie:hover,
+      .sixthMovie:hover,
+      .seventhMovie:hover,
+      .eighthhMovie:hover,
+      .textMovie1:hover {
+        filter: blur(8px);
+      }
 
+      .firstMovie:hover + .textMovie1 {
+        opacity: 1;
+        color: white;
+        text-align: center;
+        top: 30%;
+        left: 12%;
+        transform: translate(-50%, -50%);
+      }
 
-        }
+      .secondMovie:hover + .textMovie2 {
+        text-align: center;
+        opacity: 1;
+        color: white;
+        top: 30%;
+        left: 35%;
+      }
 
-        .bell {
-            margin-left: auto;
-        }
+      .thirdMovie:hover + .textMovie3 {
+        text-align: center;
+        opacity: 1;
+        color: white;
 
+        top: 30%;
+        left: 58%;
+        transform: translate(-50%, -50%);
+      }
 
-        .scrollBack,
-        .scrollForward {
+      .fourthMovie:hover + .textMovie4 {
+        text-align: center;
+        opacity: 1;
+        color: white;
+        top: 30%;
+        left: 81%;
+        transform: translate(-50%, -50%);
+      }
 
-            height: 30px;
-            width: 50px;
-            margin-top: 30%px;
-        }
+      .fifthMovie:hover + .textMovie5 {
+        opacity: 1;
+        color: white;
+        text-align: center;
+        top: 30%;
+        left: 12%;
+        transform: translate(-50%, -50%);
+      }
 
-        .container,
-        .container2 {
+      .sixthMovie:hover + .textMovie6 {
+        opacity: 1;
+        color: white;
+        text-align: center;
+        top: 30%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+      }
 
-            margin-top: 30%x;
-            margin-left: 80px;
-            position: relative;
-            display: flex;
-            overflow-x: scroll;
-            overflow: hidden;
+      .seventhMovie:hover + .textMovie7 {
+        opacity: 1;
+        color: white;
+        text-align: center;
+        top: 30%;
+        left: 58%;
+        transform: translate(-50%, -50%);
+      }
 
-
-
-
-        }
-
-        img {
-
-            margin: 20px 10px 20px 20px;
-            height: 300px;
-            width: 300px;
-
-        }
-
-        .watchNow,
-        .tranding {
-
-            margin: 80px 0 0 80px;
-
-
-
-        }
-
-        .textMovie1,
-        .textMovie2,
-        .textMovie3,
-        .textMovie4,
-        .textMovie5,
-        .textMovie6,
-        .textMovie7,
-        .textMovie8 {
-            position: absolute;
-            transform: translate(-50%, -50%);
-            opacity: 0;
-        }
-  
-        .firstMovie:hover,
-        .secondMovie:hover,
-        .thirdMovie:hover,
-        .fourthMovie:hover,
-        .fifthMovie:hover,
-        .sixthMovie:hover,
-        .seventhMovie:hover,
-        .eighthhMovie:hover,
-        .textMovie1:hover {
-
-            filter: blur(8px);
-        }
-
-        .firstMovie:hover+.textMovie1 {
-
-            opacity: 1;
-            color: white;
-            text-align: center;
-            top: 30%;
-            left: 12%;
-            transform: translate(-50%, -50%);
-
-        }
-
-        .secondMovie:hover+.textMovie2 {
-            text-align: center;
-            opacity: 1;
-            color: white;
-            top: 30%;
-            left: 35%;
-
-        }
-
-        .thirdMovie:hover+.textMovie3 {
-            text-align: center;
-            opacity: 1;
-            color: white;
-
-            top: 30%;
-            left: 58%;
-            transform: translate(-50%, -50%);
-        }
-
-
-        .fourthMovie:hover+.textMovie4 {
-            text-align: center;
-            opacity: 1;
-            color: white;
-            top: 30%;
-            left: 81%;
-            transform: translate(-50%, -50%);
-        }
-
-
-        .fifthMovie:hover+.textMovie5 {
-            opacity: 1;
-            color: white;
-            text-align: center;
-            top: 30%;
-            left: 12%;
-            transform: translate(-50%, -50%);
-
-
-        }
-
-        .sixthMovie:hover+.textMovie6 {
-            opacity: 1;
-            color: white;
-            text-align: center;
-            top: 30%;
-            left: 35%;
-            transform: translate(-50%, -50%);
-
-        }
-
-        .seventhMovie:hover+.textMovie7 {
-            opacity: 1;
-            color: white;
-            text-align: center;
-            top: 30%;
-            left: 58%;
-            transform: translate(-50%, -50%);
-
-        }
-
-        .eighthhMovie:hover+.textMovie8 {
-            opacity: 1;
-            color: white;
-            text-align: center;
-            top: 30%;
-            left: 81%;
-            transform: translate(-50%, -50%);
-
-        }
+      .eighthhMovie:hover + .textMovie8 {
+        opacity: 1;
+        color: white;
+        text-align: center;
+        top: 30%;
+        left: 81%;
+        transform: translate(-50%, -50%);
+      }
     </style>
     <header>
+      <img class="netflixImges" src="/images/netflix.png" /><a
+        href="/login.html"
+      ></a>
+      <div class="header">
+        <a class="home" href="/home.html">Home</a>
+        <a class="newPopuler" href="/home.html">New & Populer</a>
+        <a class="myList">My List</a>
+        <a class="browse">Browse</a>
 
-        <img class="netflixImges" src="/images/netflix.png"><a href="/login.html"></a>
-        <div class="header">
-            <a class="home" href="/home.html">Home</a>
-            <a class="newPopuler" href="/home.html">New & Populer</a>
-            <a class="myList">My List</a>
-            <a class="browse">Browse</a>
-
-
-            <img class="bell" src="/images/bell.webp">
-            <img class="userImge" src="/images/userImges.png">
-        </div>
+        <img class="bell" src="/images/bell.webp" />
+        <img class="userImge" src="/images/userImges.png" />
+      </div>
     </header>
 
-    <div class="watchNow">Watch Now </div>
-
+    <div class="watchNow">Watch Now</div>
 
     <div class="container">
+      <img
+        class="firstMovie"
+        src="https://m.media-amazon.com/images/M/MV5BNTliYjlkNDQtMjFlNS00NjgzLWFmMWEtYmM2Mzc2Zjg3ZjEyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg"
+      />
+      <h4 class="textMovie1">
+        Shang-Chi, the master of<br />
+        weaponry based Kung Fu, <br />forced to confront his past <br />
+        after being into the Ten <br />Rings organization.
+      </h4>
 
-                <img class="firstMovie"
-                    src="https://m.media-amazon.com/images/M/MV5BNTliYjlkNDQtMjFlNS00NjgzLWFmMWEtYmM2Mzc2Zjg3ZjEyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg">
-                <h4 class="textMovie1">Shang-Chi, the master of<br> weaponry based Kung Fu, <br>forced to confront his
-                    past <br> after being into the Ten <br>Rings organization.</h4>
+      <img
+        class="secondMovie"
+        src="https://miro.medium.com/max/700/1*vVaTOjxevLD7gpLlwjGR5w.jpeg"
+      />
 
+      <h4 class="textMovie2">
+        After the devastating events of<br />
+        Avengers: Infinity War (2018) the <br />universe is in ruins.With the
+        help <br />of remaining allies , the Avengers <br />assemble once more
+        in order<br />
+        to reverse Thanos' actions <br />
+        and restore balance to the universe.
+      </h4>
 
+      <img
+        class="thirdMovie"
+        src="https://w0.peakpx.com/wallpaper/372/137/HD-wallpaper-harry-potter-harry-potter-yabancifilm.jpg"
+      />
+      <h4 class="textMovie3"></h4>
 
-                <img class="secondMovie" src="https://miro.medium.com/max/700/1*vVaTOjxevLD7gpLlwjGR5w.jpeg">
+      <img
+        class="fourthMovie"
+        src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/5151N2hUPiL._AC_UL320_.jpg"
+      />
 
-                <h4 class="textMovie2">After the devastating events of<br> Avengers: Infinity War (2018) the
-                    <br>universe is in ruins.With the help <br>of remaining allies , the Avengers <br>assemble once more
-                    in order<br> to reverse Thanos' actions <br> and restore balance to the universe.
-                </h4>
-
-
-
-                <img class="thirdMovie"
-                    src="https://w0.peakpx.com/wallpaper/372/137/HD-wallpaper-harry-potter-harry-potter-yabancifilm.jpg">
-                <h4 class="textMovie3"></h4>
-                
-
-                <img class="fourthMovie"
-                    src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/5151N2hUPiL._AC_UL320_.jpg">
-
-                <h4 class="textMovie4"></h4>
-
-
+      <h4 class="textMovie4"></h4>
     </div>
 
     <p class="tranding">Tranding</p>
     <div class="container2">
- </button>
-                <img class="fifthMovie"
-                    src="https://m.media-amazon.com/images/M/MV5BNTliYjlkNDQtMjFlNS00NjgzLWFmMWEtYmM2Mzc2Zjg3ZjEyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg">
-                <h4 class="textMovie5"></h4>
-                <img class="sixthMovie" src="https://miro.medium.com/max/700/1*vVaTOjxevLD7gpLlwjGR5w.jpeg">
-                <h4 class="textMovie6"></h4>
-                <img class="seventhMovie"
-                    src="https://w0.peakpx.com/wallpaper/372/137/HD-wallpaper-harry-potter-harry-potter-yabancifilm.jpg">
-                <h4 class="textMovie7"></h4>
-                <img class="eighthhMovie"
-                    src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/5151N2hUPiL._AC_UL320_.jpg">
+      <img
+        class="fifthMovie"
+        src="https://m.media-amazon.com/images/M/MV5BNTliYjlkNDQtMjFlNS00NjgzLWFmMWEtYmM2Mzc2Zjg3ZjEyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg"
+      />
+      <h4 class="textMovie5"></h4>
+      <img
+        class="sixthMovie"
+        src="https://miro.medium.com/max/700/1*vVaTOjxevLD7gpLlwjGR5w.jpeg"
+      />
+      <h4 class="textMovie6"></h4>
+      <img
+        class="seventhMovie"
+        src="https://w0.peakpx.com/wallpaper/372/137/HD-wallpaper-harry-potter-harry-potter-yabancifilm.jpg"
+      />
+      <h4 class="textMovie7"></h4>
+      <img
+        class="eighthhMovie"
+        src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T2/images/I/5151N2hUPiL._AC_UL320_.jpg"
+      />
 
-
-
-                    
-                <h4 class="textMovie8"></h4>
-                
+      <h4 class="textMovie8"></h4>
     </div>
-    <script>
-    
-
-
-
-
-    </script>
-</body>
-
+    <script></script>
+  </body>
 </html>
